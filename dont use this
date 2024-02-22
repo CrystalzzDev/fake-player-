@@ -1,0 +1,73 @@
+local player = game.Players[user] -- put in ur name after "Players.urname"
+local character = player.Character
+local rootPart = character:WaitForChild("Right Arm")
+local rightleg = character:WaitForChild("Right Leg")
+local leftleg = character:WaitForChild("Left Leg")
+local leftarm = character:WaitForChild("Left Arm")
+local torso = character:WaitForChild("Torso")
+local head = character:WaitForChild("Head")
+wait(0.5) -- waits every 5 secs before making another.. uhhh
+function createPets()
+	local part = Instance.new("Part", workspace)
+	part.Name = "pet-34a7b0p2ba7ua"
+	part.Anchored = true
+	part.Size = rootPart.Size
+	part.CanCollide = false
+	part.BrickColor = BrickColor.Blue()
+	wait(0.5)
+	local part2 = Instance.new("Part", torso)
+	part2.Name = "pet-34a7b0p2ba7ua"
+	part2.Anchored = true
+	part2.Size = torso.Size
+	part2.CanCollide = false
+	part2.BrickColor = BrickColor.Blue()
+	local part3 = Instance.new("Part", rightleg)
+	part3.Name = "pet-34a7b0p2ba7ua"
+	part3.Anchored = true
+	part3.Size = rightleg.Size
+	part3.CanCollide = false
+	part3.BrickColor = BrickColor.Blue()
+	local part4 = Instance.new("Part", leftarm)
+	part4.Name = "pet-34a7b0p2ba7ua"
+	part4.Anchored = true
+	part4.Size = leftarm.Size
+	part4.CanCollide = false
+	part4.BrickColor = BrickColor.Blue()
+	local part5 = Instance.new("Part", leftleg)
+	part5.Name = "pet-34a7b0p2ba7ua"
+	part5.Anchored = true
+	part5.Size = leftleg.Size
+	part5.CanCollide = false
+	part5.BrickColor = BrickColor.Blue()
+	local part6 = Instance.new("Part", head)
+	part6.Name = "pet-34a7b0p2ba7ua"
+	part6.Anchored = true
+	part6.Size = head.Size
+	part6.CanCollide = false
+	part6.BrickColor = BrickColor.Blue()
+
+	--
+	while true do
+		wait()
+		part.Position = rootPart.CFrame * Vector3.new(0,0,0)
+		part.Rotation = rootPart.Rotation
+		part2.Position = torso.CFrame * Vector3.new(0,0,0)
+		part2.Rotation = torso.Rotation
+		part3.Position = rightleg.CFrame * Vector3.new(0,0,0)
+		part3.Rotation = rightleg.Rotation
+		part4.Position = leftarm.CFrame * Vector3.new(0,0,0)
+		part4.Rotation = leftarm.Rotation
+		part5.Position = leftleg.CFrame * Vector3.new(0,0,0)
+		part5.Rotation = leftleg.Rotation
+		part6.Position = head.CFrame * Vector3.new(0,0,0)
+		part6.Rotation = head.Rotation
+	end
+	local function deletePets()
+		part:Destroy()
+	end
+	if player.CharacterAdded:Connect() then
+		wait(1)
+		deletePets()
+	end
+end
+createPets()
